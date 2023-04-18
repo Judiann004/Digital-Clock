@@ -5,6 +5,9 @@ const AmPmE1 = document.getElementById("AmPm");
 
 function updateClock() {
     let h = new Date().getHours();
+    if (h < 10) {
+        h= `0${h}`;
+    }
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
     let AmPm ="AM";
