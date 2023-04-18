@@ -9,7 +9,13 @@ function updateClock() {
         h= `0${h}`;
     }
     let m = new Date().getMinutes();
+    if (m < 10) {
+        m= `0${m}`;
+        }
     let s = new Date().getSeconds();
+    if (s < 10) {
+        s= `0${s}`;
+    };
     let AmPm ="AM";
 
     if(h > 12) {
@@ -17,9 +23,7 @@ function updateClock() {
         AmPm = "PM";
     }
 
-    h = h <10 ? "0" + h : h;
-    m = m <10 ? "0" + m : m;
-    s = s <10 ? "0" + s : s;
+    
     
     HourE1.innerText = h;
     MinuteE1.innerText = m;
